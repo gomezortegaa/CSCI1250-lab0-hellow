@@ -52,3 +52,18 @@ double pizzatotal = pizzaboxes * pizzacost;
 Console.WriteLine ("Total slices: " + totalslices);
 Console.WriteLine ("Slices Per Person: " + slicesPer.ToString("F1"));
 Console.WriteLine ("Pizza Cost:" + pizzatotal.ToString("F2"));
+
+/*
+Part 3
+*/
+
+Console.Write ("How many hours have you worked? ");
+int hoursWorked = Convert.ToInt32(Console.ReadLine()); 
+
+Console.Write("How much do you get paid?");
+int payrate = Convert.ToInt32(Console.ReadLine());
+
+const decimal taxrate = 18m;
+
+
+
