@@ -6,6 +6,12 @@
  * Description: Calculates the fuel, food, and work behind one road trip.
 */
 
+/*
+Part 1
+*/
+
+using System.Numerics;
+
 Console.Write("How many miles did you travel? ");
 int roundTrip = Convert.ToInt32(Console.ReadLine());
 
@@ -22,4 +28,27 @@ double fuelcost = gallonsNeeded * pricePerGallon;
 Console.WriteLine ("Gallons needed: " + gallonsNeeded.ToString("F2"));
 Console.WriteLine ("Fuel cost: " + fuelcost.ToString("C"));
 
+/*
+Part 2
+*/
+
 Console.Write ("How many people are going? ");
+int attandance = Convert.ToInt32(Console.ReadLine());
+
+Console.Write ("How many pizzas? ");
+int pizzaboxes = Convert.ToInt32(Console.ReadLine());
+
+Console.Write ("Price per pizza? ");
+double pizzacost = Convert.ToDouble(Console.ReadLine());
+
+const int pizzaslices = 8;
+
+int totalslices = pizzaboxes * pizzaslices;
+
+double slicesPer = totalslices / attandance;
+
+double pizzatotal = pizzaboxes * pizzacost;
+
+Console.WriteLine ("Total slices: " + totalslices);
+Console.WriteLine ("Slices Per Person: " + slicesPer.ToString("F1"));
+Console.WriteLine ("Pizza Cost:" + pizzatotal.ToString("F2"));
