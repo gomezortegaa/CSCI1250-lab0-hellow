@@ -65,5 +65,8 @@ int payrate = Convert.ToInt32(Console.ReadLine());
 
 const decimal taxrate = 18m;
 
+double paycheck = hoursWorked * payrate;
 
+decimal grosspay = Convert.ToDouble(paycheck * taxrate); 
 
+double taxwitheld = Convert.ToDouble(grosspay * taxrate);
