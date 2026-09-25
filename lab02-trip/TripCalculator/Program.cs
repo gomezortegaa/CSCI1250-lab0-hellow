@@ -53,6 +53,8 @@ Console.WriteLine ("Total slices: " + totalslices);
 Console.WriteLine ("Slices Per Person: " + slicesPer.ToString("F1"));
 Console.WriteLine ("Pizza Cost:" + pizzatotal.ToString("F2"));
 
+
+
 /*
 Part 3
 */
@@ -61,12 +63,16 @@ Console.Write ("How many hours have you worked? ");
 int hoursWorked = Convert.ToInt32(Console.ReadLine()); 
 
 Console.Write("How much do you get paid?");
-int payrate = Convert.ToInt32(Console.ReadLine());
+decimal payrate = Convert.ToDecimal(Console.ReadLine());
 
-const decimal taxrate = 18m;
+const decimal taxrate = .18m;
 
-double paycheck = hoursWorked * payrate;
+decimal grosspay = hoursWorked * payrate;
 
-decimal grosspay = Convert.ToDouble(paycheck * taxrate); 
+decimal withheld = grosspay * taxrate;
 
-double taxwitheld = Convert.ToDouble(grosspay * taxrate);
+decimal takehome = grosspay - withheld;
+
+Console.WriteLine ("Gross Pay: " + grosspay.ToString("F2"));
+Console.WriteLine ("Tax withheld: " + withheld.ToString("F2"));
+Console.WriteLine ("Take Home Pay: " + takehome.ToString("F2"));
